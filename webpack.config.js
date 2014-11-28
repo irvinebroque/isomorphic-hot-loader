@@ -8,7 +8,7 @@ module.exports = {
   },
   entry: [
     'webpack-dev-server/client?http://localhost:3001',
-    'webpack/hot/dev-server',
+    'webpack/hot/only-dev-server',
     './client.js'
   ],
   output: {
@@ -17,7 +17,8 @@ module.exports = {
     publicPath: 'http://localhost:3001/build/'
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NoErrorsPlugin()
   ],
   module: {
     loaders: [
