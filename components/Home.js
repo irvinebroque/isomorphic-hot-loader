@@ -1,6 +1,7 @@
 /** @jsx React.DOM */
 
 var React = require('react');
+var Title = require('react-document-title');
 
 // Require React-Router
 var Router = require('react-router');
@@ -14,10 +15,12 @@ var Home = React.createClass({
 
   render: function() {
     return (
-      <div>
-        <h1>Home</h1>
-        <Link to='About'>About</Link>
-      </div>
+      <Title title='Home'>
+        <div>
+          <h1>Home</h1>
+          <Link to='About'>About</Link>
+        </div>
+      </Title>
     );
   }
 

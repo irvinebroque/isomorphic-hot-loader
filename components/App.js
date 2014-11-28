@@ -1,6 +1,7 @@
 /** @jsx React.DOM */
 
 var React = require('react');
+var Title = require('react-document-title');
 
 // Require React-Router
 var Router = require('react-router');
@@ -14,9 +15,9 @@ var App = React.createClass({
 
   render: function() {
     return (
-      <div>
+      <Title title='My App'>
         <RouteHandler/>
-      </div>
+      </Title>
     );
   }
 
