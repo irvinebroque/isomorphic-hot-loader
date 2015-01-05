@@ -1,14 +1,17 @@
-'use strict';
 var webpack = require('webpack');
 
-module.exports = {
+var definePlugin = new webpack.DefinePlugin({
+  IS_CLIENT: "true"
+});
+
+var config = {
   cache: true,
   resolve: {
-    extensions: ['', '.js', '.jsx']
+    extensions: ['', '.js']
   },
   entry: [
     'webpack-dev-server/client?http://localhost:3001',
-    'webpack/hot/only-dev-server',
+    'webpack/hot/dev-server',
     './client.js'
   ],
   output: {
@@ -18,11 +21,18 @@ module.exports = {
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoErrorsPlugin()
+    definePlugin
   ],
   module: {
     loaders: [
-      { test: /\.js$/, loaders: ['react-hot', 'jsx'] }
+      { test: /\.js$/, loaders: ['react-hot', 'jsx'] },
+      { test: /\.json$/, loaders: ['json'] }
     ]
   }
 };
+
+module.exports = config
+
+if (process.env.NODE_ENV === "development") {
+  config.devtool = 'eval' // This is not as dirty as it looks. It just generates source maps without being crazy slow.
+}

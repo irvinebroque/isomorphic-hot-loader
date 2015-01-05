@@ -1,0 +1,7 @@
+node_modules/*
+.gitignore
+.env
+build/*
+static/*
+package.json
+readme.md

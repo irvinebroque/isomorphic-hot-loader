@@ -1,0 +1,17 @@
+{
+  "settings": {
+    "ecmascript": 6,
+    "jsx": true
+  },
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "rules": {
+    "global-strict": true,
+    "semi": false,
+    "no-use-before-define": false,
+    "no-unused-vars": false
+  },
+
+}

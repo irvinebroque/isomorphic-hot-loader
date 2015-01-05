@@ -8,6 +8,7 @@ var port = process.env.HOT_LOAD_PORT || 3001;
 new WebpackDevServer(webpack(config), {
   contentBase: 'http://localhost:3000',
   publicPath: config.output.publicPath,
+  noInfo: true,
   hot: true
 }).listen(port, 'localhost', function (err, result) {
   if (err) {

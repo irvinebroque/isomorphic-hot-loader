@@ -1,0 +1,10 @@
+#!/bin/bash
+echo 'Starting up boot2docker'
+$(boot2docker shellinit)
+echo 'Open http://192.168.59.103/'
+docker run -e NODE_ENV=production -t -p 80:80 my/project
+echo "Done!"
+echo "================================================"
+echo "    Run 'npm run dev' to start the server"
+echo "================================================"
+
