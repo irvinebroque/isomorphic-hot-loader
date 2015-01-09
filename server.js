@@ -32,17 +32,30 @@ server.use(function (req, res, next) {
   // Head is treated as a special component that we only render server-side.
   var head = React.renderToStaticMarkup(Head());
 
+  var router = Router.create({
+    routes: routes,
+    location: req.path,
+    onAbort: function defaultAbortHandler(abortReason, location) {
+      console.log(abortReason)
+      console.log(location)
+      if (abortReason && abortReason.to) {
+        res.redirect(abortReason.to);
+      } else {
+        console.log("Error thrown for url: " + location);
+      }
+    }
+  })
+
+  var content = ""
+
+  router.run(function (Handler, state) {
+    content = React.renderToString(React.createElement(Handler, null), null);
+  });
+
   res.write('<html>');
   res.write(head);
   res.write('<body style="overflow: hidden; height: 100%; position: fixed; width: 100%;">');
-
-  // Run react-router on the server
-  Router.run(routes, req.path, function (Handler, state) {
-    // Content is the route handler, which then handles all the routing and kicks back HTML with React.renderToString
-    var content = React.renderToString(React.createElement(Handler, null), null);
-    res.write(content);
-  });
-
+  res.write(content);
   res.write('</body>');
 
   // In development, the compiled javascript is served by a WebpackDevServer, which lets us 'hot load' scripts in for live editing.
