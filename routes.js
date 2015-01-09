@@ -19,8 +19,8 @@ var Redirect = Router.Redirect;
 var Routes = (
   <Route handler={App}>
     <DefaultRoute name="Home" handler={Home}/>
-    <Route name="About" path="/about" handler={About}/>
-    <Redirect from="foo" to="About"/>
+    <Route name="About Me" path="/about" handler={About}/>
+    <Redirect from="foo" to="About Me"/>
     <NotFoundRoute handler={NotFound}/>
   </Route>
 );
