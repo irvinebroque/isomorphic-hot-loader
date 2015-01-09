@@ -17,6 +17,7 @@ var Home = React.createClass({
         <div>
           <h1>Home</h1>
           <Link to='About'>About</Link>
+          <Link to='/foo'>Foo</Link>
         </div>
       </Title>
     );
