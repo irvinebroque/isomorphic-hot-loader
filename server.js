@@ -37,7 +37,7 @@ server.use(function (req, res, next) {
     location: req.path,
     onAbort: function defaultAbortHandler(abortReason, location) {
       if (abortReason && abortReason.to) {
-        res.redirect(abortReason.to);
+        res.redirect(301, abortReason.to);
       } else {
         console.log("Error thrown for url: " + location);
       }
