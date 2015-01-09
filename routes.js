@@ -14,11 +14,13 @@ var NotFoundRoute = Router.NotFoundRoute;
 var DefaultRoute = Router.DefaultRoute;
 var Link = Router.Link;
 var RouteHandler = Router.RouteHandler;
+var Redirect = Router.Redirect;
 
 var Routes = (
   <Route handler={App}>
     <DefaultRoute name="Home" handler={Home}/>
     <Route name="About" path="/about" handler={About}/>
+    <Redirect from="foo" to="About"/>
     <NotFoundRoute handler={NotFound}/>
   </Route>
 );
