@@ -36,8 +36,6 @@ server.use(function (req, res, next) {
     routes: routes,
     location: req.path,
     onAbort: function defaultAbortHandler(abortReason, location) {
-      console.log(abortReason)
-      console.log(location)
       if (abortReason && abortReason.to) {
         res.redirect(abortReason.to);
       } else {
