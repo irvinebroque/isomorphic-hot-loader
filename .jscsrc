@@ -1,8 +1,0 @@
-{
-  "esnext": true,
-  "excludeFiles": [
-    "build/**",
-    "node_modules/**"
-  ],
-  "preset": "airbnb"
-}

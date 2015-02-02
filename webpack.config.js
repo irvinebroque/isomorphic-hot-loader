@@ -1,8 +1,9 @@
-var webpack = require('webpack');
+/* @flow weak */
 
-var definePlugin = new webpack.DefinePlugin({
-  IS_CLIENT: "true"
-});
+"use strict";
+
+var webpack = require('webpack');
+var path = require('path');
 
 var config = {
   cache: true,
@@ -10,29 +11,27 @@ var config = {
     extensions: ['', '.js']
   },
   entry: [
-    'webpack-dev-server/client?http://localhost:3001',
+    'webpack-dev-server/client?http://localhost:8888',
     'webpack/hot/dev-server',
     './client.js'
   ],
   output: {
-    path: __dirname+'/build/',
+    path: path.join(__dirname, '/build/'),
     filename: 'client.js',
-    publicPath: 'http://localhost:3001/build/'
+    publicPath: 'http://localhost:8888/build/'
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
-    definePlugin
+    new webpack.HotModuleReplacementPlugin()
   ],
   module: {
     loaders: [
-      { test: /\.js$/, loaders: ['react-hot', 'jsx'] },
-      { test: /\.json$/, loaders: ['json'] }
+      { test: /\.js$/, exclude: /node_modules/, loaders: ['react-hot', '6to5-loader', 'jsx?harmony'] }
     ]
   }
 };
 
-module.exports = config
-
 if (process.env.NODE_ENV === "development") {
-  config.devtool = 'eval' // This is not as dirty as it looks. It just generates source maps without being crazy slow.
+  config.devtool = 'eval'; // This is not as dirty as it looks. It just generates source maps without being crazy slow.
 }
+
+module.exports = config;
