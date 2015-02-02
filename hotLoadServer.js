@@ -1,12 +1,17 @@
-// This little dev server is basically a wrapped express server that 'hot loads' our javascript for super fancy and fast live reload in development
+/* @flow weak */
+
+"use strict";
+
+// This little dev server is basically a wrapped express server that
+// 'hot loads' our javascript for super fast live reload in development
 var webpack = require('webpack');
 var WebpackDevServer = require('webpack-dev-server');
 var config = require('./webpack.config');
 
-var port = process.env.HOT_LOAD_PORT || 3001;
+var port = process.env.HOT_LOAD_PORT || 8888;
 
 new WebpackDevServer(webpack(config), {
-  contentBase: 'http://localhost:3000',
+  contentBase: 'http://localhost:8888',
   publicPath: config.output.publicPath,
   noInfo: true,
   hot: true
@@ -15,5 +20,5 @@ new WebpackDevServer(webpack(config), {
     console.log(err);
   }
 
-  console.log('Listening at localhost:' + port);
+  console.log('Hot load server listening at localhost:' + port);
 });

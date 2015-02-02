@@ -1,8 +1,6 @@
-var Dispatcher = require('../dispatcher');
+/* @flow weak */
 
-var debug = require('debug');
-var ActionsDebug = debug('Actions');
-debug.enable('*');
+var Dispatcher = require('../dispatcher');
 
 var Actions = {
 
@@ -11,7 +9,6 @@ var Actions = {
       action: 'EXAMPLE_ACTION',
       thing: thing
     });
-    ActionsDebug('exampleAction');
   },
 
 

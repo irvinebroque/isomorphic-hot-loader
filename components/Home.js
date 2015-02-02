@@ -1,13 +1,8 @@
+/* @flow weak */
+
 var React = require('react');
 var Title = require('react-document-title');
-
-// Require React-Router
-var Router = require('react-router');
-var Route = Router.Route;
-var NotFoundRoute = Router.NotFoundRoute;
-var DefaultRoute = Router.DefaultRoute;
-var Link = Router.Link;
-var RouteHandler = Router.RouteHandler;
+var Link = require('react-router').Link;
 
 var Home = React.createClass({
 

@@ -1,7 +1,4 @@
-node_modules/*
-.gitignore
-.env
-build/*
-static/*
-package.json
-readme.md
+build
+node_modules
+.DS_Store
+npm-debug.log

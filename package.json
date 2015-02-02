@@ -1,6 +1,6 @@
 {
   "name": "isomorphic-hot-loader",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Isomorphic Hot Loader",
   "repository": {
     "type": "git",
@@ -9,43 +9,74 @@
   "main": "server.js",
   "author": "Brendan Irvine-Broque <brendanib@gmail.com>",
   "scripts": {
-    "dev": "NODE_ENV=development node_modules/.bin/supervisor --ignore build/ -e js server & NODE_ENV=development node hotLoadServer.js --progress",
-    "start": "NODE_ENV=production node server",
-    "lint": "eslint ./ & jsxcs ./",
+    "dev": "NODE_ENV=development node_modules/.bin/supervisor --harmony --ignore build/ -e js server & NODE_ENV=development node hotLoadServer.js",
+    "start": "NODE_ENV=production node --harmony server",
+    "lint": "eslint ./",
+    "typecheck":"flow",
     "build": "node_modules/.bin/webpack -p --progress --colors",
-    "test": "jest",
-    "proxy": "node_modules/.bin/foxy http://localhost:3000 --port 3002"
+    "test": "jest && eslint ./"
+  },
+  "eslintConfig": {
+    "ecmaFeatures": {
+      "jsx": true,
+      "blockBindings": true,
+      "forOf": true,
+      "generators": true
+    },
+    "env": {
+      "browser": true,
+      "node": true
+    },
+    "rules": {
+      "strict": [
+        2,
+        "global"
+      ],
+      "no-underscore-dangle": false,
+      "quotes": false,
+      "no-unused-vars": false,
+      "new-cap": false
+    }
+  },
+  "jest": {
+    "scriptPreprocessor": "preprocessor.js",
+    "unmockedModulePathPatterns": [
+      "node_modules/react"
+    ]
   },
   "dependencies": {
     "body-parser": "^1.6.4",
     "chroma-js": "^0.6.3",
     "compression": "^1.3.0",
     "cors": "^2.5.2",
-    "debug": "^2.1.0",
     "express": "^4.3.2",
     "flux": "^2.0.1",
     "fuzzy": "^0.1.0",
-    "hammerjs": "^2.0.4",
     "moment": "^2.8.4",
     "node-jsx": "^0.12.0",
     "object-assign": "^2.0.0",
+    "raf": "^2.0.4",
     "react": "^0.12.0",
     "react-document-title": "^0.1.3",
-    "react-hammerjs": "^0.1.3",
     "react-router": "^0.11.6",
+    "react-scroll-components": "^0.1.0",
+    "react-tappable": "^0.2.5",
+    "react-tween-state": "0.0.4",
     "rest": "^1.2.0",
+    "ua-parser-js": "^0.7.3",
     "when": "^3.6.3"
   },
   "devDependencies": {
-    "eslint": "^0.11.0-alpha.0",
-    "foxy": "^7.0.2",
+    "6to5-core": "^3.1.1",
+    "6to5-loader": "^3.0.0",
+    "eslint": "^0.13.0",
     "jest-cli": "^0.2.1",
     "json-loader": "^0.5.1",
     "jsx-loader": "^0.12.0",
-    "jsxcs": "^0.2.1",
     "react-hot-loader": "^1.0.4",
+    "react-tools": "^0.12.2",
     "supervisor": "^0.6.0",
-    "webpack": "^1.4.12",
-    "webpack-dev-server": "^1.6.6"
+    "webpack": "^1.5.3",
+    "webpack-dev-server": "^1.7.0"
   }
 }
