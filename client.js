@@ -11,9 +11,9 @@ var RouteHandler = Router.RouteHandler;
 // by calling if (this.props.deviceType === "mobile")
 var deviceType;
 
-if (window.matchMedia("(max-width: 639px)").matches === true) {
+if (window.matchMedia("(max-width: 639px)").matches) {
   deviceType = "mobile";
-} else if (window.matchMedia("(max-width: 768px)").matches === true) {
+} else if (window.matchMedia("(max-width: 768px)").matches) {
   deviceType = "tablet";
 } else {
   deviceType = "desktop";
