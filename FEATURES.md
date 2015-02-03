@@ -8,6 +8,11 @@
 - [x] Server-side rendering
 - [x] Server-side routing
 
+### Flux & Data Fetching
+
+- [x] Flux architecture
+- [x] Uses `fetch()` polyfill on both server and client
+
 ### Development & design workflow
 
 - [x] "Hot-loaded" javascript builds (live-reload with no refresh, components maintain state)
