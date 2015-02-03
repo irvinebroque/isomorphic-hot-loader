@@ -1,7 +1,7 @@
 {
   "name": "isomorphic-hot-loader",
-  "version": "0.0.3",
-  "description": "Isomorphic Hot Loader",
+  "version": "0.0.4",
+  "description": "An actively maintained starter project for building isomorphic web apps with React.js",
   "repository": {
     "type": "git",
     "url": "git://github.com/irvinebroque/isomorphic-hot-loader.git"

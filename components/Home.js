@@ -1,5 +1,7 @@
 /* @flow weak */
 
+/*global fetch*/
+
 "use strict";
 
 var React = require('react');
