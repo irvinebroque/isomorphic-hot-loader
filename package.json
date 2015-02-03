@@ -1,7 +1,7 @@
 {
   "name": "isomorphic-hot-loader",
-  "version": "0.0.3",
-  "description": "Isomorphic Hot Loader",
+  "version": "0.0.4",
+  "description": "An actively maintained starter project for building isomorphic web apps with React.js",
   "repository": {
     "type": "git",
     "url": "git://github.com/irvinebroque/isomorphic-hot-loader.git"
@@ -12,7 +12,7 @@
     "dev": "NODE_ENV=development node_modules/.bin/supervisor --harmony --ignore build/ -e js server & NODE_ENV=development node hotLoadServer.js",
     "start": "NODE_ENV=production node --harmony server",
     "lint": "eslint ./",
-    "typecheck":"flow",
+    "typecheck": "flow",
     "build": "node_modules/.bin/webpack -p --progress --colors",
     "test": "jest && eslint ./"
   },
@@ -45,6 +45,8 @@
     ]
   },
   "dependencies": {
+    "6to5": "^3.3.4",
+    "6to5-runtime": "^3.3.4",
     "body-parser": "^1.6.4",
     "chroma-js": "^0.6.3",
     "compression": "^1.3.0",
@@ -52,6 +54,7 @@
     "express": "^4.3.2",
     "flux": "^2.0.1",
     "fuzzy": "^0.1.0",
+    "isomorphic-fetch": "^1.7.0",
     "moment": "^2.8.4",
     "node-jsx": "^0.12.0",
     "object-assign": "^2.0.0",

@@ -1,5 +1,7 @@
 /* @flow weak */
 
+"use strict";
+
 var Dispatcher = require('../dispatcher');
 
 var Actions = {
@@ -9,8 +11,7 @@ var Actions = {
       action: 'EXAMPLE_ACTION',
       thing: thing
     });
-  },
-
+  }
 
 };
 
