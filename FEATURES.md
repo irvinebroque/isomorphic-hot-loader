@@ -12,11 +12,16 @@
 
 - [x] Flux architecture
 - [x] Uses `fetch()` polyfill on both server and client
+- [ ] Immutable data stuctures using [Immutable.js](https://github.com/facebook/immutable-js)
 
 ### Development & design workflow
 
 - [x] "Hot-loaded" javascript builds (live-reload with no refresh, components maintain state)
 - [ ] CSS in JS
+
+### CSS
+
+- [x] normalize.css to fix cross-browser inconsistencies
 
 ### Testing & Linting
 
@@ -24,10 +29,17 @@
 - [x] Jest configured to support JSX
 - [x] Flow configured for weak mode inferred type checking
 - [x] .editorconfig file with sane defaults
-- [ ] Continuous Integration via CircleCI / TravisCI
+- [x] Continuous Integration via CircleCI
 - [ ] CI integration with BrowserStack
 
 ### Deployment & Builds
 
 - [x] Minimized JS build with dead code elimination
 - [ ] Docker configuration
+- [ ] Cache busting
+- [ ] Bundle splitting per-route
+
+### Internationalization
+
+- [ ] react-intl
+
