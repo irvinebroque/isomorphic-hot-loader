@@ -1,5 +1,7 @@
 /* @flow weak */
 
+"use strict";
+
 var React = require('react');
 var Route = require('react-router').Route;
 var NotFoundRoute = require('react-router').NotFoundRoute;

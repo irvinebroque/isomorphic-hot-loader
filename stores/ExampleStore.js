@@ -1,41 +1,36 @@
+/* @flow weak */
+
+"use strict";
+
 var Dispatcher = require('../dispatcher');
 var EventEmitter = require('events').EventEmitter;
 var assign = require('object-assign');
 var fuzzy = require('fuzzy');
 var CHANGE_EVENT = 'change';
 
-var debug = require('debug');
-var exampleStoreDebug = debug('ExampleStore');
-debug.enable('*');
-
 // Data structures that this store manipulates
-var _thing = "thing";
+var _things = [];
 
 function _addThing(thing) {
-  _projects = projects;
-  exampleStoreDebug('projects added');
+  _things.push(thing);
 }
 
 var ExampleStore = assign({}, EventEmitter.prototype, {
 
   emitChange: function() {
     this.emit(CHANGE_EVENT);
-    exampleStoreDebug('emitChange');
   },
 
   addChangeListener: function(callback) {
     this.on(CHANGE_EVENT, callback);
-    exampleStoreDebug('addChangeListener');
   },
 
   removeChangeListener: function(callback) {
     this.removeListener(CHANGE_EVENT, callback);
-    exampleStoreDebug('removeChangeListener');
   },
 
   getThing: function() {
-    exampleStoreDebug('getThing');
-    return _thing;
+    return _things;
   }
 
 });

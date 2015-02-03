@@ -1,3 +1,5 @@
+[![Circle CI](https://circleci.com/gh/irvinebroque/isomorphic-hot-loader.svg?style=svg)](https://circleci.com/gh/irvinebroque/isomorphic-hot-loader)
+
 **Goal:** To provide a starter project for React.js projects with sane defaults and community-driven best practices.
 
 - [Features](/FEATURES.md)
