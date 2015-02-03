@@ -1,5 +1,7 @@
 /* @flow weak */
 
+"use strict";
+
 var React = require('react');
 var Title = require('react-document-title');
 var Link = require('react-router').Link;
