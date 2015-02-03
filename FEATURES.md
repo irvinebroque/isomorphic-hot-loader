@@ -8,6 +8,11 @@
 - [x] Server-side rendering
 - [x] Server-side routing
 
+### ES6
+
+- [x] 6to5-loader with minimal runtime dependency footprint
+- [x] Server-side `require("6to5/register");` ES6 polyfill
+
 ### Flux & Data Fetching
 
 - [x] Flux architecture
