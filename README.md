@@ -1,3 +1,5 @@
+[![Circle CI](https://circleci.com/gh/irvinebroque/isomorphic-hot-loader.svg?style=svg)](https://circleci.com/gh/irvinebroque/isomorphic-hot-loader)
+
 # Isomorphic React + React-Router + React-Hot-Loader
 
 This is a demo app that demonstrates a minimal viable implementation of combining the following awesome projects:
