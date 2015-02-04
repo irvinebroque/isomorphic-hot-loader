@@ -6,6 +6,8 @@
 
 ## Install
 
+[![Join the chat at https://gitter.im/irvinebroque/isomorphic-hot-loader](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/irvinebroque/isomorphic-hot-loader?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 1. Install [node.js](https://nodejs.org) (`brew install node`).
 2. Install [Flow](http://flowtype.org/docs/getting-started.html#_) (`brew install flow`) for inferred type checking in development with no extra work.
 3. Clone this repository
