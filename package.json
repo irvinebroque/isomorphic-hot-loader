@@ -9,11 +9,11 @@
   "main": "server.js",
   "author": "Brendan Irvine-Broque <brendanib@gmail.com>",
   "scripts": {
-    "dev": "NODE_ENV=development node_modules/.bin/supervisor --harmony --ignore build/ -e js server & NODE_ENV=development node hotLoadServer.js",
+    "dev": "NODE_ENV=development supervisor --harmony --ignore build/ -e js server & NODE_ENV=development node hotLoadServer.js",
     "start": "NODE_ENV=production node --harmony server",
     "lint": "eslint ./",
     "typecheck": "flow",
-    "build": "node_modules/.bin/webpack -p --progress --colors",
+    "build": "webpack -p --progress --colors",
     "test": "jest && eslint ./"
   },
   "eslintConfig": {
