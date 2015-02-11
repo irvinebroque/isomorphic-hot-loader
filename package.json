@@ -61,7 +61,7 @@
     "raf": "^2.0.4",
     "react": "^0.12.0",
     "react-document-title": "^0.1.3",
-    "react-router": "^0.11.6",
+    "react-router": "^0.12.0",
     "react-scroll-components": "^0.1.0",
     "react-tappable": "^0.2.5",
     "react-tween-state": "0.0.4",
