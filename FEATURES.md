@@ -10,8 +10,8 @@
 
 ### ES6
 
-- [x] 6to5-loader with minimal runtime dependency footprint
-- [x] Server-side `require("6to5/register");` ES6 polyfill
+- [x] babel-loader with minimal runtime dependency footprint
+- [x] Server-side `require("babel/register");` ES6 polyfill
 
 ### Flux & Data Fetching
 
@@ -47,4 +47,3 @@
 ### Internationalization
 
 - [ ] react-intl
-

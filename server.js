@@ -1,7 +1,7 @@
 /* @flow weak */
 
 "use strict";
-require("6to5/register");
+require("babel/register");
 require('node-jsx').install({extension: '.js'});
 var express = require('express');
 var compression = require('compression');

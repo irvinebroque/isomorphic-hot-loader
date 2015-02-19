@@ -25,7 +25,7 @@ var config = {
   ],
   module: {
     loaders: [
-      { test: /\.js$/, exclude: /node_modules/, loaders: ['react-hot', '6to5-loader?experimental&optional=selfContained', 'jsx?harmony'] }
+      { test: /\.js$/, exclude: /node_modules/, loaders: ['react-hot', 'babel-loader?experimental&optional=selfContained'] }
     ]
   }
 };
