@@ -13,7 +13,7 @@
     "start": "NODE_ENV=production node --harmony server",
     "lint": "eslint ./",
     "typecheck": "flow",
-    "build": "webpack -p --progress --colors",
+    "build": "NODE_ENV=production webpack -p --progress --colors",
     "test": "jest && eslint ./"
   },
   "eslintConfig": {
@@ -60,6 +60,7 @@
     "object-assign": "^2.0.0",
     "raf": "^2.0.4",
     "react": "^0.12.0",
+    "react-a11y": "0.0.5",
     "react-document-title": "^0.1.3",
     "react-router": "^0.12.0",
     "react-scroll-components": "^0.1.0",
