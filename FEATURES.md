@@ -39,11 +39,19 @@
 
 ### Deployment & Builds
 
-- [x] Minimized JS build with dead code elimination
-- [ ] Docker configuration
+- [x] Minimized JS build with dead code elimination (`webpack -p`)
+- [ ] Docker container configuration
 - [ ] Cache busting
 - [ ] Bundle splitting per-route
 
 ### Internationalization
 
 - [ ] react-intl
+
+### SEO
+
+- [ ] Open Graph and other domain-specific meta tags via [react-side-effect](https://github.com/gaearon/react-side-effect)
+
+### Accessibility
+
+- [ ] Console warning in dev if elements aren't visible to screen readers, via [react-a11y](https://github.com/rackt/react-a11y).
