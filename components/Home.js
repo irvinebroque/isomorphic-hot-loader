@@ -25,9 +25,6 @@ var Home = React.createClass({
   },
 
   render: function() {
-
-    console.log(this.state);
-
     return (
       <Title title='Home'>
         <div>
