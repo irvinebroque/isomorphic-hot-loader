@@ -34,4 +34,8 @@ if (process.env.NODE_ENV === "development") {
   config.devtool = 'eval'; // This is not as dirty as it looks. It just generates source maps without being crazy slow.
 }
 
+if (process.env.NODE_ENV === "production") {
+  config.resolve.alias = {'react-a11y': function() {}}; // Aliases react-a11y to nothing in production
+}
+
 module.exports = config;
