@@ -4,7 +4,7 @@
 
 // The head component ONLY gets rendered server-side
 var React = require('react');
-var PureRenderMixin = require('react').addons.PureRenderMixin;
+var PureRenderMixin = require('react/addons').addons.PureRenderMixin;
 
 var Head = React.createClass({
 
