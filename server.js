@@ -64,6 +64,11 @@ server.use(function (req, res, next) {
   router.run(function (Handler, state) {
     content = React.renderToString(React.createElement(Handler, {routerState: state, deviceType: deviceType, environment: "server"}), null);
   });
+  
+  // If we've already redirected (ie, if onAbort was called), don't continue
+  if (res.headersSent) {
+    return;
+  }
 
   // Resets the document title on each request
   // See https://github.com/gaearon/react-document-title#server-usage
